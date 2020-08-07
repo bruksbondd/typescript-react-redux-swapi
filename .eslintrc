@@ -6,26 +6,32 @@
     "plugin:import/warnings",
     "plugin:import/typescript"
   ],
-  "parser":  "@typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion":  2018,
-    "sourceType":  "module",
+    "ecmaVersion": 2018,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "jsx":  true
+      "jsx": true
     }
   },
-  "rules":  {
-    "react/jsx-filename-extension": [2, {
-      "extensions": [
-        ".tsx"
-      ]
-    }],
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
     "react/jsx-props-no-spreading": 0,
     "import/prefer-default-export": 0,
-    "import/extensions": [1, "ignorePackages", {
-      "ts": "never",
-      "tsx": "never"
-    }]
+    "import/extensions": [
+      1,
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "linebreak-style": 0
   },
   "settings": {
     "import/parsers": {

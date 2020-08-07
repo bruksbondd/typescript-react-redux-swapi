@@ -8,22 +8,26 @@ type PropTypes = {
 
 export const Header: FC<PropTypes> = ({ title }: PropTypes) => {
   const content = typeof title === 'string' ? title.toLocaleLowerCase() : null;
-  const [counter, setCounter] = useState<number>(0);
+  const [counter, setCounter] = useState(1);
 
   const increase = (): void => {
-    setCounter((prev) => prev + 1);
+    setCounter((prevCounter) => prevCounter + 1);
   };
 
   const decrease = (): void => {
-    setCounter((prev) => prev - 1);
+    setCounter((prevCounter) => prevCounter - 1);
   };
 
   return (
     <>
       <h1>{content}</h1>
-      <h3>{counter}</h3>
-      <button onClick={increase}>Add +</button>
-      <button onClick={decrease}>Sub -</button>
+      <h3>{counter.toFixed()}</h3>
+      <button type="button" onClick={increase}>
+        Increase
+      </button>
+      <button type="button" onClick={decrease}>
+        Decrease
+      </button>
     </>
   );
 };
